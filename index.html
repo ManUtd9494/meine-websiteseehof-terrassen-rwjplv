@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seehof Terrassen Zug — Büro- & Retailflächen am Zugersee</title>
+<meta name="description" content="Seehof Terrassen Zug: 8'500 m² Premium-Büro- und Retailflächen direkt am Zugersee. Bezug März 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b12;
+  --bg-2:#0b121d;
+  --panel:rgba(255,255,255,.035);
+  --panel-2:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.09);
+  --border-strong:rgba(255,255,255,.16);
+  --text:#eef2f7;
+  --muted:#94a3b5;
+  --muted-2:#6b7a8d;
+  --gold:#d8b46a;
+  --gold-soft:#e7cd96;
+  --teal:#4ad0c0;
+  --blue:#5b8def;
+  --green:#56c596;
+  --amber:#e3b341;
+  --red:#e26d6d;
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow:0 30px 80px -30px rgba(0,0,0,.7);
+  --maxw:1240px;
+  --font:'Manrope',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{position:relative;padding:110px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--gold);opacity:.7}
+h2.title{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(30px,4.4vw,50px);line-height:1.08;letter-spacing:-.01em;
+  margin-bottom:18px;
+}
+.lead{color:var(--muted);font-size:clamp(16px,1.6vw,18.5px);max-width:620px}
+.serif{font-family:var(--serif)}
+
+/* ============ NAV ============ */
+header.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:background .35s ease,backdrop-filter .35s ease,border-color .35s ease;
+  border-bottom:1px solid transparent;
+}
+header.nav.scrolled{
+  background:rgba(7,11,18,.78);
+  backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:.01em}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;flex:none;
+  background:conic-gradient(from 210deg,var(--gold),var(--teal),var(--blue),var(--gold));
+  position:relative;box-shadow:0 8px 24px -8px var(--gold);
+}
+.brand .mark::after{
+  content:"";position:absolute;inset:3px;border-radius:6px;background:var(--bg-2);
+}
+.brand .mark::before{
+  content:"";position:absolute;inset:0;z-index:2;
+  background:linear-gradient(135deg,transparent 38%,rgba(255,255,255,.6) 50%,transparent 62%);
+  border-radius:9px;
+}
+.brand b{font-size:16px}
+.brand span{display:block;font-size:10.5px;font-weight:500;color:var(--muted-2);letter-spacing:.16em;text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{
+  padding:9px 14px;border-radius:9px;font-size:14.5px;font-weight:500;color:var(--muted);
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--text);background:var(--panel)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang{
+  display:flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--panel);
+}
+.lang button{padding:7px 12px;font-size:13px;font-weight:600;color:var(--muted)}
+.lang button.active{background:var(--gold);color:#1a1206}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:11px 20px;border-radius:11px;font-weight:600;font-size:14.5px;
+  transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap;
+}
+.btn-primary{background:var(--gold);color:#1a1206;box-shadow:0 12px 30px -12px var(--gold)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -12px var(--gold)}
+.btn-ghost{border:1px solid var(--border-strong);color:var(--text)}
+.btn-ghost:hover{background:var(--panel-2);transform:translateY(-2px)}
+.nav-toggle{display:none;font-size:24px;color:var(--text);padding:6px}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:120px 0 80px;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;background:var(--bg)}
+.hero-grad{
+  position:absolute;inset:-20%;z-index:0;
+  background:
+    radial-gradient(60% 50% at 20% 18%,rgba(72,140,239,.30),transparent 60%),
+    radial-gradient(55% 55% at 82% 28%,rgba(74,208,192,.26),transparent 60%),
+    radial-gradient(50% 60% at 60% 80%,rgba(216,180,106,.20),transparent 60%),
+    linear-gradient(140deg,#081320,#0a1018 55%,#0b0e14);
+  background-size:200% 200%;
+  animation:grad 22s ease-in-out infinite;
+  filter:saturate(118%);
+}
+@keyframes grad{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+#waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;z-index:1;display:block}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,transparent 30%,rgba(7,11,18,.4) 78%,var(--bg) 100%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;width:100%}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border-radius:100px;
+  background:var(--panel);border:1px solid var(--border);font-size:13px;font-weight:500;color:var(--muted);
+  margin-bottom:26px;
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(40px,7vw,82px);line-height:1.02;letter-spacing:-.02em;
+  max-width:14ch;margin-bottom:24px;
+}
+.hero h1 em{font-style:italic;color:var(--gold-soft)}
+.hero-sub{font-size:clamp(17px,1.9vw,21px);color:var(--muted);max-width:560px;margin-bottom:36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:54px}
+.hero-stats{display:flex;gap:42px;flex-wrap:wrap}
+.hero-stat .v{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:500;color:var(--text)}
+.hero-stat .k{font-size:13px;color:var(--muted-2);letter-spacing:.04em;margin-top:2px}
+.scroll-hint{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted-2);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.scroll-hint .line{width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:drop 2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============ PROJECT / KEY FACTS ============ */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-bottom:54px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fact{
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;
+  position:relative;overflow:hidden;transition:transform .3s,border-color .3s;
+}
+.fact:hover{transform:translateY(-6px);border-color:var(--border-strong)}
+.fact::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),transparent);opacity:.6;
+}
+.fact .ico{
+  width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:20px;
+  background:var(--panel-2);border:1px solid var(--border);color:var(--gold);
+}
+.fact .ico svg{width:22px;height:22px}
+.fact .big{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1;margin-bottom:8px}
+.fact .lbl{font-weight:600;font-size:15px;margin-bottom:5px}
+.fact .desc{font-size:13.5px;color:var(--muted)}
+
+/* ============ FLOOR FINDER ============ */
+#finder{background:linear-gradient(180deg,var(--bg),var(--bg-2) 50%,var(--bg))}
+.finder-grid{display:grid;grid-template-columns:340px 1fr;gap:38px;align-items:start;margin-top:18px}
+.building{
+  background:linear-gradient(170deg,rgba(91,141,239,.07),var(--panel));
+  border:1px solid var(--border);border-radius:var(--radius);padding:22px;position:sticky;top:96px;
+}
+.building h3{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:4px;letter-spacing:.02em}
+.building .roof{
+  height:26px;border-radius:10px 10px 4px 4px;margin-bottom:8px;
+  background:linear-gradient(180deg,rgba(216,180,106,.4),rgba(216,180,106,.12));
+  border:1px solid var(--border);position:relative;
+}
+.building .roof::after{content:"";position:absolute;left:14px;right:14px;top:7px;height:1px;background:rgba(255,255,255,.2)}
+.floor-stack{display:flex;flex-direction:column;gap:7px}
+.floor-row{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:14px 16px;border-radius:var(--radius-sm);cursor:pointer;
+  background:var(--panel);border:1px solid var(--border);
+  transition:all .25s ease;position:relative;overflow:hidden;
+}
+.floor-row .fill{
+  position:absolute;left:0;top:0;bottom:0;width:0;
+  background:linear-gradient(90deg,rgba(74,208,192,.16),rgba(74,208,192,.03));
+  transition:width .5s ease;z-index:0;
+}
+.floor-row>*{position:relative;z-index:1}
+.floor-row:hover{border-color:var(--border-strong);transform:translateX(3px)}
+.floor-row.active{border-color:var(--gold);background:rgba(216,180,106,.10)}
+.floor-row.dim{opacity:.38}
+.floor-row .fl-name{font-weight:600;font-size:14.5px}
+.floor-row .fl-use{font-size:11.5px;color:var(--muted-2);margin-top:1px}
+.floor-row .fl-count{
+  font-size:12px;font-weight:700;padding:4px 9px;border-radius:100px;
+  background:var(--panel-2);border:1px solid var(--border);color:var(--teal);white-space:nowrap;
+}
+.floor-row.active .fl-count{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.building .ground{
+  height:16px;margin-top:8px;border-radius:4px 4px 10px 10px;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),transparent);border:1px solid var(--border);
+}
+.lake-line{
+  margin-top:14px;font-size:11.5px;color:var(--muted-2);display:flex;align-items:center;gap:8px;
+}
+.lake-line .w{flex:1;height:8px;border-radius:4px;background:repeating-linear-gradient(90deg,rgba(74,208,192,.3) 0 6px,transparent 6px 12px)}
+
+.finder-main{min-width:0}
+.filters{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:22px;align-items:flex-end}
+.filter-group{display:flex;flex-direction:column;gap:8px}
+.filter-group .flbl{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{
+  padding:8px 15px;border-radius:100px;font-size:13.5px;font-weight:600;
+  background:var(--panel);border:1px solid var(--border);color:var(--muted);transition:all .2s;
+}
+.chip:hover{color:var(--text);border-color:var(--border-strong)}
+.chip.active{background:var(--text);color:var(--bg);border-color:var(--text)}
+.chip.use-office.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip.use-retail.active{background:var(--teal);border-color:var(--teal);color:#06231f}
+.chip.use-gastro.active{background:var(--gold);border-color:var(--gold);color:#1a1206}
+.result-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.result-count{font-size:14px;color:var(--muted)}
+.result-count b{color:var(--text)}
+.reset{font-size:13px;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:6px}
+.reset:hover{text-decoration:underline}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px}
+.unit{
+  background:linear-gradient(165deg,var(--panel-2),var(--panel));
+  border:1px solid var(--border);border-radius:var(--radius);padding:20px;
+  display:flex;flex-direction:column;gap:14px;transition:transform .25s,border-color .25s,box-shadow .25s;
+  animation:fadeUp .4s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.unit:hover{transform:translateY(-5px);border-color:var(--border-strong);box-shadow:var(--shadow)}
+.unit-top{display:flex;justify-content:space-between;align-items:flex-start}
+.unit-id{font-family:var(--serif);font-size:22px;font-weight:500}
+.unit-floor{font-size:12px;color:var(--muted-2);margin-top:2px}
+.tag{font-size:11px;font-weight:700;padding:5px 11px;border-radius:100px;letter-spacing:.02em;border:1px solid}
+.tag.use-office{color:var(--blue);border-color:rgba(91,141,239,.4);background:rgba(91,141,239,.1)}
+.tag.use-retail{color:var(--teal);border-color:rgba(74,208,192,.4);background:rgba(74,208,192,.1)}
+.tag.use-gastro{color:var(--gold);border-color:rgba(216,180,106,.4);background:rgba(216,180,106,.1)}
+.unit-specs{display:flex;gap:18px}
+.unit-spec .sv{font-size:19px;font-weight:700}
+.unit-spec .sk{font-size:11.5px;color:var(--muted-2)}
+.unit-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:14px;margin-top:auto}
+.status{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600}
+.status .sd{width:8px;height:8px;border-radius:50%}
+.status.available{color:var(--green)}.status.available .sd{background:var(--green);box-shadow:0 0 10px var(--green)}
+.status.reserved{color:var(--amber)}.status.reserved .sd{background:var(--amber)}
+.status.let{color:var(--muted-2)}.status.let .sd{background:var(--muted-2)}
+.unit .req{font-size:13px;font-weight:600;color:var(--gold);display:inline-flex;align-items:center;gap:5px}
+.unit .req:hover{gap:9px}
+.unit .req[disabled]{color:var(--muted-2);cursor:not-allowed}
+.no-results{
+  grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--muted);
+  border:1px dashed var(--border);border-radius:var(--radius);
+}
+
+/* ============ TIMELINE ============ */
+.timeline{position:relative;margin-top:30px}
+.tl-track{position:absolute;left:0;right:0;top:30px;height:2px;background:var(--border)}
+.tl-prog{position:absolute;left:0;top:30px;height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));width:62%}
+.tl-items{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.tl-item{position:relative;padding-top:60px}
+.tl-item .node{
+  position:absolute;top:22px;left:0;width:18px;height:18px;border-radius:50%;
+  background:var(--bg);border:2px solid var(--gold);
+}
+.tl-item.done .node{background:var(--gold);box-shadow:0 0 16px rgba(216,180,106,.6)}
+.tl-item.active .node{border-color:var(--teal);background:var(--teal);box-shadow:0 0 18px var(--teal);animation:pulse 2s infinite}
+.tl-year{font-family:var(--serif);font-size:30px;font-weight:500;color:var(--gold-soft);margin-bottom:6px}
+.tl-q{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2);margin-bottom:10px}
+.tl-h{font-weight:700;font-size:16.5px;margin-bottom:6px}
+.tl-d{font-size:13.5px;color:var(--muted)}
+
+/* ============ LOCATION ============ */
+#location{background:var(--bg-2)}
+.loc-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;align-items:center}
+.loc-map{
+  position:relative;aspect-ratio:1/1;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);
+  background:
+    radial-gradient(70% 60% at 70% 65%,rgba(74,208,192,.22),transparent 60%),
+    linear-gradient(160deg,#0c1622,#0a1018);
+}
+.loc-map .lake{
+  position:absolute;right:-8%;bottom:-12%;width:78%;height:70%;border-radius:50% 40% 46% 50%;
+  background:radial-gradient(circle at 60% 40%,rgba(74,208,192,.32),rgba(91,141,239,.12));
+  filter:blur(2px);
+  animation:shimmer 7s ease-in-out infinite;
+}
+@keyframes shimmer{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.04) rotate(2deg)}}
+.loc-map .pin{
+  position:absolute;left:38%;top:42%;width:20px;height:20px;border-radius:50% 50% 50% 0;
+  background:var(--gold);transform:rotate(-45deg);box-shadow:0 0 0 8px rgba(216,180,106,.18),0 0 30px var(--gold);
+}
+.loc-map .pin::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bg-2)}
+.loc-map .ripple{position:absolute;left:36.5%;top:40%;width:60px;height:60px;border:1px solid rgba(216,180,106,.4);border-radius:50%;animation:ripple 3s infinite}
+@keyframes ripple{0%{transform:scale(.4);opacity:1}100%{transform:scale(2.4);opacity:0}}
+.loc-map .label{position:absolute;left:24px;bottom:22px;font-family:var(--serif);font-size:20px;color:var(--text)}
+.loc-map .label span{display:block;font-family:var(--font);font-size:12px;color:var(--muted-2);letter-spacing:.05em}
+.dist-chips{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+.dchip{
+  display:flex;align-items:center;gap:13px;padding:16px 18px;border-radius:var(--radius-sm);
+  background:var(--panel);border:1px solid var(--border);transition:all .25s;
+}
+.dchip:hover{transform:translateY(-3px);border-color:var(--border-strong);background:var(--panel-2)}
+.dchip .di{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:none;background:var(--panel-2);color:var(--teal);border:1px solid var(--border)}
+.dchip .di svg{width:20px;height:20px}
+.dchip .dt b{display:block;font-size:15px}
+.dchip .dt span{font-size:12.5px;color:var(--muted)}
+.dchip .dv{margin-left:auto;font-family:var(--serif);font-size:18px;color:var(--gold-soft);white-space:nowrap}
+
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:54px}
+.contact-info .lead{margin-bottom:32px}
+.ci-list{display:flex;flex-direction:column;gap:20px}
+.ci-item{display:flex;gap:15px;align-items:flex-start}
+.ci-item .ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex:none;background:var(--panel-2);border:1px solid var(--border);color:var(--gold)}
+.ci-item .ico svg{width:20px;height:20px}
+.ci-item b{display:block;font-size:15px;margin-bottom:2px}
+.ci-item span{font-size:14px;color:var(--muted)}
+.form{
+  background:linear-gradient(165deg,var(--panel-2),var(--panel));
+  border:1px solid var(--border);border-radius:var(--radius);padding:32px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:18px;display:flex;flex-direction:column;gap:7px}
+.field label{font-size:13px;font-weight:600;color:var(--muted)}
+.field label .req-star{color:var(--gold)}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;border-radius:11px;font-family:inherit;font-size:14.5px;
+  background:var(--bg);border:1px solid var(--border);color:var(--text);transition:border-color .2s,box-shadow .2s;
+}
+.field textarea{resize:vertical;min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(216,180,106,.14);
+}
+.field select option{background:var(--bg-2);color:var(--text)}
+.form .btn-primary{width:100%;justify-content:center;margin-top:6px;padding:15px}
+.form-note{font-size:12px;color:var(--muted-2);margin-top:14px;text-align:center}
+.form-success{
+  display:none;text-align:center;padding:34px 20px;
+}
+.form-success.show{display:block;animation:fadeUp .4s ease}
+.form-success .check{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;
+  background:rgba(86,197,150,.14);border:1px solid rgba(86,197,150,.4);color:var(--green);
+}
+.form-success h3{font-family:var(--serif);font-size:24px;font-weight:500;margin-bottom:8px}
+.form-success p{color:var(--muted);font-size:14.5px}
+
+/* ============ FOOTER ============ */
+footer{border-top:1px solid var(--border);padding:54px 0 32px;background:var(--bg)}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:38px}
+.foot-brand{max-width:320px}
+.foot-brand p{color:var(--muted);font-size:14px;margin-top:14px}
+.foot-cols{display:flex;gap:64px;flex-wrap:wrap}
+.foot-col h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:14px}
+.foot-col a{display:block;font-size:14px;color:var(--muted);padding:5px 0;transition:color .2s}
+.foot-col a:hover{color:var(--text)}
+.foot-bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--border);font-size:13px;color:var(--muted-2)}
+.foot-bot a:hover{color:var(--gold)}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1080px){
+  .facts{grid-template-columns:1fr 1fr}
+  .finder-grid{grid-template-columns:1fr;gap:26px}
+  .building{position:static}
+  .floor-stack{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .loc-grid{grid-template-columns:1fr;gap:36px}
+  .contact-grid{grid-template-columns:1fr;gap:36px}
+  .tl-items{grid-template-columns:1fr 1fr;gap:32px}
+  .tl-track,.tl-prog{display:none}
+}
+@media(max-width:760px){
+  section{padding:80px 0}
+  .nav-links{display:none}
+  .nav-toggle{display:block}
+  .nav-links.open{
+    display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;
+    background:rgba(7,11,18,.97);backdrop-filter:blur(20px);padding:16px 24px 22px;
+    border-bottom:1px solid var(--border);gap:2px;
+  }
+  .nav-links.open a{padding:13px 14px}
+  .hero-stats{gap:28px}
+  .form-row{grid-template-columns:1fr}
+  .dist-chips{grid-template-columns:1fr}
+  .foot-cols{gap:40px}
+}
+@media(max-width:480px){
+  .facts{grid-template-columns:1fr}
+  .floor-stack{grid-template-columns:1fr}
+  .tl-items{grid-template-columns:1fr}
+  .units{grid-template-columns:1fr}
+  .wrap{padding:0 18px}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="brand">
+      <span class="mark"></span>
+      <span><b>Seehof Terrassen</b><span data-i18n="brand.sub">Zug · Am Zugersee</span></span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#project" data-i18n="nav.project">Projekt</a>
+      <a href="#finder" data-i18n="nav.finder">Flächen</a>
+      <a href="#timeline" data-i18n="nav.timeline">Zeitplan</a>
+      <a href="#location" data-i18n="nav.location">Lage</a>
+      <a href="#contact" data-i18n="nav.contact">Kontakt</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button id="lang-de" class="active" onclick="setLang('de')">DE</button>
+        <button id="lang-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#contact" class="btn btn-primary" data-i18n="nav.cta">Beratung</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grad"></div>
+  <canvas id="waves"></canvas>
+  <div class="wrap hero-inner">
+    <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">Vermarktungsstart · Bezug März 2027</span></span>
+    <h1 data-i18n="hero.h1">Arbeiten, wo <em>der See</em> beginnt.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">Seehof Terrassen Zug — 8'500 m² Premium-Büro- und Retailflächen in einzigartiger Lage direkt am Zugersee. Modular teilbar, nachhaltig gebaut, sofort vormerkbar.</p>
+    <div class="hero-cta">
+      <a href="#finder" class="btn btn-primary" data-i18n="hero.cta1">Flächen entdecken</a>
+      <a href="#project" class="btn btn-ghost" data-i18n="hero.cta2">Projekt ansehen</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="v">8'500 m²</div><div class="k" data-i18n="hero.s1">Nutzfläche</div></div>
+      <div class="hero-stat"><div class="v">5</div><div class="k" data-i18n="hero.s2">Etagen</div></div>
+      <div class="hero-stat"><div class="v">0 m</div><div class="k" data-i18n="hero.s3">zum Seeufer</div></div>
+      <div class="hero-stat"><div class="v">2027</div><div class="k" data-i18n="hero.s4">Bezug</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span data-i18n="hero.scroll">Scrollen</span><span class="line"></span></div>
+</section>
+
+<!-- ============ PROJECT ============ -->
+<section id="project">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-i18n="proj.eyebrow">Das Projekt</span>
+        <h2 class="title" data-i18n="proj.title">Eine Adresse, die Massstäbe setzt.</h2>
+        <p class="lead" data-i18n="proj.lead">Der Neubau Seehof Terrassen vereint flexible Grundrisse, hochwertige Materialisierung und konsequente Nachhaltigkeit zu einem Arbeitsort von seltener Qualität — mitten im Wirtschaftsraum Zug.</p>
+      </div>
+      <a href="#contact" class="btn btn-ghost" data-i18n="proj.dossier">Dossier anfordern</a>
+    </div>
+    <div class="facts">
+      <div class="fact">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg></div>
+        <div class="big">8'500 m²</div>
+        <div class="lbl" data-i18n="proj.f1.l">Vermietbare Fläche</div>
+        <div class="desc" data-i18n="proj.f1.d">Modular teilbar ab 180 m² bis zu ganzen Etagen.</div>
+      </div>
+      <div class="fact">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M2 12h20M4 7l16 10M20 7L4 17"/></svg></div>
+        <div class="big">Minergie-P</div>
+        <div class="lbl" data-i18n="proj.f2.l">Nachhaltigkeit</div>
+        <div class="desc" data-i18n="proj.f2.d">Geothermie, PV-Fassade und Regenwassernutzung.</div>
+      </div>
+      <div class="fact">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div class="big">2027</div>
+        <div class="lbl" data-i18n="proj.f3.l">Bezug März</div>
+        <div class="desc" data-i18n="proj.f3.d">Schlüsselfertiger Ausbau nach Mieterwunsch.</div>
+      </div>
+      <div class="fact">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div class="big">0 m</div>
+        <div class="lbl" data-i18n="proj.f4.l">Seelage</div>
+        <div class="desc" data-i18n="proj.f4.d">Direkter Zugang zur Uferpromenade und ÖV.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOOR FINDER ============ -->
+<section id="finder">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="fin.eyebrow">Etagen-Finder</span>
+    <h2 class="title" data-i18n="fin.title">Finden Sie Ihre Fläche.</h2>
+    <p class="lead" data-i18n="fin.lead">Wählen Sie eine Etage im Gebäudeschnitt und filtern Sie nach Nutzung und Verfügbarkeit. Jede Einheit lässt sich direkt unverbindlich vormerken.</p>
+
+    <div class="finder-grid">
+      <!-- Building cross-section -->
+      <aside class="building">
+        <h3 data-i18n="fin.section">Gebäudeschnitt</h3>
+        <div class="roof"></div>
+        <div class="floor-stack" id="floorStack"></div>
+        <div class="ground"></div>
+        <div class="lake-line"><span class="w"></span><span data-i18n="fin.lake">Zugersee</span></div>
+      </aside>
+
+      <!-- Filters + units -->
+      <div class="finder-main">
+        <div class="filters">
+          <div class="filter-group">
+            <span class="flbl" data-i18n="fin.fuse">Nutzung</span>
+            <div class="chips" id="useChips">
+              <button class="chip active" data-use="all" data-i18n="fin.all">Alle</button>
+              <button class="chip use-office" data-use="office" data-i18n="use.office">Büro</button>
+              <button class="chip use-retail" data-use="retail" data-i18n="use.retail">Retail</button>
+              <button class="chip use-gastro" data-use="gastro" data-i18n="use.gastro">Gastro</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="flbl" data-i18n="fin.favail">Verfügbarkeit</span>
+            <div class="chips" id="availChips">
+              <button class="chip active" data-avail="all" data-i18n="fin.all">Alle</button>
+              <button class="chip" data-avail="available" data-i18n="status.available">Verfügbar</button>
+              <button class="chip" data-avail="reserved" data-i18n="status.reserved">Reserviert</button>
+              <button class="chip" data-avail="let" data-i18n="status.let">Vermietet</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-bar">
+          <div class="result-count" id="resultCount"></div>
+          <button class="reset" id="resetBtn" onclick="resetFilters()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 109-9 9 9 0 00-6.4 2.6L3 8"/><path d="M3 3v5h5"/></svg>
+            <span data-i18n="fin.reset">Zurücksetzen</span>
+          </button>
+        </div>
+
+        <div class="units" id="unitsGrid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="tl.eyebrow">Realisierung</span>
+    <h2 class="title" data-i18n="tl.title">Vom Spatenstich zum Bezug.</h2>
+    <div class="timeline">
+      <div class="tl-track"></div>
+      <div class="tl-prog"></div>
+      <div class="tl-items">
+        <div class="tl-item done"><span class="node"></span>
+          <div class="tl-year">2024</div><div class="tl-q" data-i18n="tl.1.q">Q2 · Baustart</div>
+          <div class="tl-h" data-i18n="tl.1.h">Spatenstich & Aushub</div>
+          <div class="tl-d" data-i18n="tl.1.d">Baufreigabe erteilt, Aushub und Fundation abgeschlossen.</div>
+        </div>
+        <div class="tl-item done"><span class="node"></span>
+          <div class="tl-year">2025</div><div class="tl-q" data-i18n="tl.2.q">Q3 · Rohbau</div>
+          <div class="tl-h" data-i18n="tl.2.h">Rohbau & Aufrichte</div>
+          <div class="tl-d" data-i18n="tl.2.d">Tragstruktur und Geschossdecken aller 5 Etagen erstellt.</div>
+        </div>
+        <div class="tl-item active"><span class="node"></span>
+          <div class="tl-year">2026</div><div class="tl-q" data-i18n="tl.3.q">Q4 · Ausbau</div>
+          <div class="tl-h" data-i18n="tl.3.h">Fassade & Innenausbau</div>
+          <div class="tl-d" data-i18n="tl.3.d">PV-Fassade montiert, mieterspezifischer Ausbau startet.</div>
+        </div>
+        <div class="tl-item"><span class="node"></span>
+          <div class="tl-year">2027</div><div class="tl-q" data-i18n="tl.4.q">Q1 · Bezug</div>
+          <div class="tl-h" data-i18n="tl.4.h">Übergabe & Bezug</div>
+          <div class="tl-d" data-i18n="tl.4.d">Schlüsselübergabe im März, Eröffnung der Uferpromenade.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="loc.eyebrow">Die Lage</span>
+    <h2 class="title" data-i18n="loc.title">Im Herzen von Zug — am Wasser.</h2>
+    <div class="loc-grid">
+      <div class="loc-map" aria-hidden="true">
+        <div class="lake"></div>
+        <div class="ripple"></div>
+        <div class="pin"></div>
+        <div class="label">Seehof Terrassen<span data-i18n="loc.maplabel">Zugersee · Stadt Zug</span></div>
+      </div>
+      <div>
+        <p class="lead" data-i18n="loc.lead">Zentraler geht es nicht: Bahnhof Zug, Autobahnanschluss und Seepromenade liegen wenige Minuten entfernt — und Zürich erreichen Sie in einer halben Stunde.</p>
+        <div class="dist-chips">
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M4 11h16M8 21l2-4M16 21l-2-4"/></svg></div><div class="dt"><b data-i18n="loc.c1.t">Bahnhof Zug</b><span data-i18n="loc.c1.s">ÖV-Drehscheibe</span></div><div class="dv">450 m</div></div>
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 17h14l-1.5-6H6.5L5 17z"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/><path d="M8 11V7h8v4"/></svg></div><div class="dt"><b data-i18n="loc.c2.t">Autobahn A4</b><span data-i18n="loc.c2.s">Anschluss Zug</span></div><div class="dv">1.8 km</div></div>
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 18c2-1 3-1 5 0s3 1 5 0 3-1 5 0M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><path d="M12 3v8"/></svg></div><div class="dt"><b data-i18n="loc.c3.t">Seepromenade</b><span data-i18n="loc.c3.s">Direkter Zugang</span></div><div class="dv">0 m</div></div>
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 22l10-18 10 18M7 22l5-9 5 9"/></svg></div><div class="dt"><b data-i18n="loc.c4.t">Flughafen ZRH</b><span data-i18n="loc.c4.s">via A4/A14</span></div><div class="dv">35 Min</div></div>
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg></div><div class="dt"><b data-i18n="loc.c5.t">Zürich HB</b><span data-i18n="loc.c5.s">Direktverbindung</span></div><div class="dv">28 Min</div></div>
+          <div class="dchip"><div class="di"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div class="dt"><b data-i18n="loc.c6.t">Altstadt Zug</b><span data-i18n="loc.c6.s">Shopping & Gastro</span></div><div class="dv">600 m</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow" data-i18n="con.eyebrow">Kontakt</span>
+        <h2 class="title" data-i18n="con.title">Sichern Sie sich Ihre Fläche.</h2>
+        <p class="lead" data-i18n="con.lead">Unser Vermarktungsteam berät Sie persönlich zu Grundrissen, Ausbau und Konditionen. Wählen Sie Ihre Wunscheinheit aus — wir melden uns innert 24 Stunden.</p>
+        <div class="ci-list">
+          <div class="ci-item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.8 2z"/></svg></div><div><b>+41 41 500 27 27</b><span data-i18n="con.phone">Mo–Fr, 08:30–18:00</span></div></div>
+          <div class="ci-item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></div><div><b>vermarktung@seehof-zug.ch</b><span data-i18n="con.mail">Wir antworten innert 24 h</span></div></div>
+          <div class="ci-item"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><b data-i18n="con.addr.t">Seehof Terrassen, Zug</b><span data-i18n="con.addr.s">Seestrasse, 6300 Zug</span></div></div>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" novalidate>
+        <div id="formFields">
+          <div class="form-row">
+            <div class="field"><label data-i18n="con.fn">Vorname <span class="req-star">*</span></label><input type="text" name="fname" required></div>
+            <div class="field"><label data-i18n="con.ln">Nachname <span class="req-star">*</span></label><input type="text" name="lname" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label data-i18n="con.em">E-Mail <span class="req-star">*</span></label><input type="email" name="email" required></div>
+            <div class="field"><label data-i18n="con.ph">Telefon</label><input type="tel" name="phone"></div>
+          </div>
+          <div class="field"><label data-i18n="con.co">Unternehmen</label><input type="text" name="company"></div>
+          <div class="field">
+            <label data-i18n="con.un">Wunscheinheit</label>
+            <select name="unit" id="unitSelect"></select>
+          </div>
+          <div class="field"><label data-i18n="con.msg">Nachricht</label><textarea name="message" data-i18n-ph="con.msgph" placeholder="Ihre Anfrage, gewünschte Fläche oder Bezugstermin…"></textarea></div>
+          <button type="submit" class="btn btn-primary" data-i18n="con.submit">Anfrage senden</button>
+          <p class="form-note" data-i18n="con.note">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <div class="check"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3 data-i18n="con.ok.t">Vielen Dank!</h3>
+          <p data-i18n="con.ok.d">Ihre Anfrage ist eingegangen. Unser Team meldet sich innert 24 Stunden bei Ihnen.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#hero" class="brand"><span class="mark"></span><span><b>Seehof Terrassen</b><span>Zug · Am Zugersee</span></span></a>
+        <p data-i18n="foot.desc">Premium-Büro- und Retailflächen am Zugersee. Ein Vermarktungsprojekt — Bezug März 2027.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col"><h4 data-i18n="foot.nav">Navigation</h4>
+          <a href="#project" data-i18n="nav.project">Projekt</a>
+          <a href="#finder" data-i18n="nav.finder">Flächen</a>
+          <a href="#timeline" data-i18n="nav.timeline">Zeitplan</a>
+          <a href="#location" data-i18n="nav.location">Lage</a>
+        </div>
+        <div class="foot-col"><h4 data-i18n="foot.legal">Rechtliches</h4>
+          <a href="#" data-i18n="foot.imp">Impressum</a>
+          <a href="#" data-i18n="foot.priv">Datenschutz</a>
+          <a href="#" data-i18n="foot.terms">AGB</a>
+        </div>
+        <div class="foot-col"><h4 data-i18n="foot.contact">Kontakt</h4>
+          <a href="tel:+41415002727">+41 41 500 27 27</a>
+          <a href="mailto:vermarktung@seehof-zug.ch">vermarktung@seehof-zug.ch</a>
+          <a href="#contact" data-i18n="nav.cta">Beratung</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Seehof Terrassen Zug · <span data-i18n="foot.fiktiv">Fiktives Vermarktungsprojekt</span></span>
+      <span data-i18n="foot.made">Realisiert mit CavoraAI · Cavora Partners</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= I18N ================= */
+const I18N={
+  de:{
+    "brand.sub":"Zug · Am Zugersee",
+    "nav.project":"Projekt","nav.finder":"Flächen","nav.timeline":"Zeitplan","nav.location":"Lage","nav.contact":"Kontakt","nav.cta":"Beratung",
+    "hero.badge":"Vermarktungsstart · Bezug März 2027",
+    "hero.h1":"Arbeiten, wo <em>der See</em> beginnt.",
+    "hero.sub":"Seehof Terrassen Zug — 8'500 m² Premium-Büro- und Retailflächen in einzigartiger Lage direkt am Zugersee. Modular teilbar, nachhaltig gebaut, sofort vormerkbar.",
+    "hero.cta1":"Flächen entdecken","hero.cta2":"Projekt ansehen",
+    "hero.s1":"Nutzfläche","hero.s2":"Etagen","hero.s3":"zum Seeufer","hero.s4":"Bezug","hero.scroll":"Scrollen",
+    "proj.eyebrow":"Das Projekt","proj.title":"Eine Adresse, die Massstäbe setzt.",
+    "proj.lead":"Der Neubau Seehof Terrassen vereint flexible Grundrisse, hochwertige Materialisierung und konsequente Nachhaltigkeit zu einem Arbeitsort von seltener Qualität — mitten im Wirtschaftsraum Zug.",
+    "proj.dossier":"Dossier anfordern",
+    "proj.f1.l":"Vermietbare Fläche","proj.f1.d":"Modular teilbar ab 180 m² bis zu ganzen Etagen.",
+    "proj.f2.l":"Nachhaltigkeit","proj.f2.d":"Geothermie, PV-Fassade und Regenwassernutzung.",
+    "proj.f3.l":"Bezug März","proj.f3.d":"Schlüsselfertiger Ausbau nach Mieterwunsch.",
+    "proj.f4.l":"Seelage","proj.f4.d":"Direkter Zugang zur Uferpromenade und ÖV.",
+    "fin.eyebrow":"Etagen-Finder","fin.title":"Finden Sie Ihre Fläche.",
+    "fin.lead":"Wählen Sie eine Etage im Gebäudeschnitt und filtern Sie nach Nutzung und Verfügbarkeit. Jede Einheit lässt sich direkt unverbindlich vormerken.",
+    "fin.section":"Gebäudeschnitt","fin.lake":"Zugersee","fin.fuse":"Nutzung","fin.favail":"Verfügbarkeit","fin.all":"Alle","fin.reset":"Zurücksetzen",
+    "use.office":"Büro","use.retail":"Retail","use.gastro":"Gastro",
+    "status.available":"Verfügbar","status.reserved":"Reserviert","status.let":"Vermietet",
+    "tl.eyebrow":"Realisierung","tl.title":"Vom Spatenstich zum Bezug.",
+    "tl.1.q":"Q2 · Baustart","tl.1.h":"Spatenstich & Aushub","tl.1.d":"Baufreigabe erteilt, Aushub und Fundation abgeschlossen.",
+    "tl.2.q":"Q3 · Rohbau","tl.2.h":"Rohbau & Aufrichte","tl.2.d":"Tragstruktur und Geschossdecken aller 5 Etagen erstellt.",
+    "tl.3.q":"Q4 · Ausbau","tl.3.h":"Fassade & Innenausbau","tl.3.d":"PV-Fassade montiert, mieterspezifischer Ausbau startet.",
+    "tl.4.q":"Q1 · Bezug","tl.4.h":"Übergabe & Bezug","tl.4.d":"Schlüsselübergabe im März, Eröffnung der Uferpromenade.",
+    "loc.eyebrow":"Die Lage","loc.title":"Im Herzen von Zug — am Wasser.","loc.maplabel":"Zugersee · Stadt Zug",
+    "loc.lead":"Zentraler geht es nicht: Bahnhof Zug, Autobahnanschluss und Seepromenade liegen wenige Minuten entfernt — und Zürich erreichen Sie in einer halben Stunde.",
+    "loc.c1.t":"Bahnhof Zug","loc.c1.s":"ÖV-Drehscheibe","loc.c2.t":"Autobahn A4","loc.c2.s":"Anschluss Zug",
+    "loc.c3.t":"Seepromenade","loc.c3.s":"Direkter Zugang","loc.c4.t":"Flughafen ZRH","loc.c4.s":"via A4/A14",
+    "loc.c5.t":"Zürich HB","loc.c5.s":"Direktverbindung","loc.c6.t":"Altstadt Zug","loc.c6.s":"Shopping & Gastro",
+    "con.eyebrow":"Kontakt","con.title":"Sichern Sie sich Ihre Fläche.",
+    "con.lead":"Unser Vermarktungsteam berät Sie persönlich zu Grundrissen, Ausbau und Konditionen. Wählen Sie Ihre Wunscheinheit aus — wir melden uns innert 24 Stunden.",
+    "con.phone":"Mo–Fr, 08:30–18:00","con.mail":"Wir antworten innert 24 h","con.addr.t":"Seehof Terrassen, Zug","con.addr.s":"Seestrasse, 6300 Zug",
+    "con.fn":"Vorname","con.ln":"Nachname","con.em":"E-Mail","con.ph":"Telefon","con.co":"Unternehmen","con.un":"Wunscheinheit","con.msg":"Nachricht",
+    "con.msgph":"Ihre Anfrage, gewünschte Fläche oder Bezugstermin…","con.submit":"Anfrage senden",
+    "con.note":"Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.",
+    "con.ok.t":"Vielen Dank!","con.ok.d":"Ihre Anfrage ist eingegangen. Unser Team meldet sich innert 24 Stunden bei Ihnen.",
+    "con.selplaceholder":"— Einheit wählen (optional) —","con.gen":"Allgemeine Anfrage",
+    "foot.desc":"Premium-Büro- und Retailflächen am Zugersee. Ein Vermarktungsprojekt — Bezug März 2027.",
+    "foot.nav":"Navigation","foot.legal":"Rechtliches","foot.contact":"Kontakt",
+    "foot.imp":"Impressum","foot.priv":"Datenschutz","foot.terms":"AGB",
+    "foot.fiktiv":"Fiktives Vermarktungsprojekt","foot.made":"Realisiert mit CavoraAI · Cavora Partners",
+    "unit.req":"Vormerken","unit.taken":"Nicht verfügbar",
+    "res.count":"{n} von {t} Einheiten","res.none":"Keine Einheiten entsprechen Ihren Filtern. Bitte Auswahl anpassen.",
+    "fl.0":"Erdgeschoss","fl.1":"1. Obergeschoss","fl.2":"2. Obergeschoss","fl.3":"3. Obergeschoss","fl.4":"Attikageschoss",
+    "fl.0s":"EG","fl.1s":"1. OG","fl.2s":"2. OG","fl.3s":"3. OG","fl.4s":"Attika",
+    "fin.unitavail":"{n} verfügbar","perMonth":"/ Mt."
+  },
+  en:{
+    "brand.sub":"Zug · On Lake Zug",
+    "nav.project":"Project","nav.finder":"Spaces","nav.timeline":"Timeline","nav.location":"Location","nav.contact":"Contact","nav.cta":"Consult",
+    "hero.badge":"Marketing launch · Move-in March 2027",
+    "hero.h1":"Work where <em>the lake</em> begins.",
+    "hero.sub":"Seehof Terrassen Zug — 8,500 m² of premium office and retail space in a unique location right on Lake Zug. Modular layouts, sustainably built, available to reserve now.",
+    "hero.cta1":"Explore spaces","hero.cta2":"View project",
+    "hero.s1":"Usable area","hero.s2":"Floors","hero.s3":"to the shore","hero.s4":"Move-in","hero.scroll":"Scroll",
+    "proj.eyebrow":"The Project","proj.title":"An address that sets the standard.",
+    "proj.lead":"The new Seehof Terrassen building combines flexible floor plans, premium materials and rigorous sustainability into a workplace of rare quality — in the heart of the Zug business hub.",
+    "proj.dossier":"Request dossier",
+    "proj.f1.l":"Lettable area","proj.f1.d":"Modular from 180 m² up to entire floors.",
+    "proj.f2.l":"Sustainability","proj.f2.d":"Geothermal energy, PV façade and rainwater reuse.",
+    "proj.f3.l":"Move-in March","proj.f3.d":"Turn-key fit-out to tenant specification.",
+    "proj.f4.l":"Lakefront","proj.f4.d":"Direct access to the promenade and public transport.",
+    "fin.eyebrow":"Floor Finder","fin.title":"Find your space.",
+    "fin.lead":"Select a floor in the building section and filter by use and availability. Every unit can be reserved directly and without obligation.",
+    "fin.section":"Building section","fin.lake":"Lake Zug","fin.fuse":"Use","fin.favail":"Availability","fin.all":"All","fin.reset":"Reset",
+    "use.office":"Office","use.retail":"Retail","use.gastro":"Food & Bev.",
+    "status.available":"Available","status.reserved":"Reserved","status.let":"Let",
+    "tl.eyebrow":"Delivery","tl.title":"From groundbreaking to move-in.",
+    "tl.1.q":"Q2 · Start","tl.1.h":"Groundbreaking & excavation","tl.1.d":"Building permit granted, excavation and foundation completed.",
+    "tl.2.q":"Q3 · Structure","tl.2.h":"Shell & topping-out","tl.2.d":"Load-bearing structure and floor slabs of all 5 levels built.",
+    "tl.3.q":"Q4 · Fit-out","tl.3.h":"Façade & interior","tl.3.d":"PV façade installed, tenant-specific fit-out begins.",
+    "tl.4.q":"Q1 · Handover","tl.4.h":"Handover & move-in","tl.4.d":"Key handover in March, opening of the lakeside promenade.",
+    "loc.eyebrow":"The Location","loc.title":"In the heart of Zug — on the water.","loc.maplabel":"Lake Zug · City of Zug",
+    "loc.lead":"It doesn't get more central: Zug station, motorway access and the lakeside promenade are minutes away — and Zurich is just half an hour by train.",
+    "loc.c1.t":"Zug Station","loc.c1.s":"Transit hub","loc.c2.t":"Motorway A4","loc.c2.s":"Zug junction",
+    "loc.c3.t":"Lake promenade","loc.c3.s":"Direct access","loc.c4.t":"Airport ZRH","loc.c4.s":"via A4/A14",
+    "loc.c5.t":"Zurich Main","loc.c5.s":"Direct train","loc.c6.t":"Zug Old Town","loc.c6.s":"Shopping & dining",
+    "con.eyebrow":"Contact","con.title":"Secure your space.",
+    "con.lead":"Our marketing team advises you personally on floor plans, fit-out and terms. Select your preferred unit — we'll get back to you within 24 hours.",
+    "con.phone":"Mon–Fri, 08:30–18:00","con.mail":"We reply within 24 h","con.addr.t":"Seehof Terrassen, Zug","con.addr.s":"Seestrasse, 6300 Zug",
+    "con.fn":"First name","con.ln":"Last name","con.em":"E-mail","con.ph":"Phone","con.co":"Company","con.un":"Preferred unit","con.msg":"Message",
+    "con.msgph":"Your enquiry, desired area or move-in date…","con.submit":"Send enquiry",
+    "con.note":"By submitting you agree to our privacy policy.",
+    "con.ok.t":"Thank you!","con.ok.d":"Your enquiry has been received. Our team will contact you within 24 hours.",
+    "con.selplaceholder":"— Choose a unit (optional) —","con.gen":"General enquiry",
+    "foot.desc":"Premium office and retail space on Lake Zug. A marketing project — move-in March 2027.",
+    "foot.nav":"Navigation","foot.legal":"Legal","foot.contact":"Contact",
+    "foot.imp":"Imprint","foot.priv":"Privacy","foot.terms":"Terms",
+    "foot.fiktiv":"Fictional marketing project","foot.made":"Built with CavoraAI · Cavora Partners",
+    "unit.req":"Reserve","unit.taken":"Unavailable",
+    "res.count":"{n} of {t} units","res.none":"No units match your filters. Please adjust your selection.",
+    "fl.0":"Ground floor","fl.1":"1st floor","fl.2":"2nd floor","fl.3":"3rd floor","fl.4":"Penthouse floor",
+    "fl.0s":"GF","fl.1s":"1F","fl.2s":"2F","fl.3s":"3F","fl.4s":"PH",
+    "fin.unitavail":"{n} available","perMonth":"/ mo."
+  }
+};
+
+let LANG="de";
+const t=(k)=> (I18N[LANG][k]!==undefined?I18N[LANG][k]:k);
+
+/* ================= UNIT DATA ================= */
+const UNITS=[
+  {id:"E.01",floor:0,use:"retail",area:320,price:6800,status:"available"},
+  {id:"E.02",floor:0,use:"gastro",area:185,price:4200,status:"reserved"},
+  {id:"E.03",floor:0,use:"retail",area:240,price:5100,status:"available"},
+  {id:"1.A", floor:1,use:"office",area:410,price:9200,status:"available"},
+  {id:"1.B", floor:1,use:"office",area:285,price:6500,status:"let"},
+  {id:"2.A", floor:2,use:"office",area:520,price:11800,status:"available"},
+  {id:"2.B", floor:2,use:"office",area:350,price:7900,status:"reserved"},
+  {id:"3.A", floor:3,use:"office",area:480,price:11000,status:"available"},
+  {id:"3.B", floor:3,use:"office",area:300,price:6900,status:"available"},
+  {id:"4.A", floor:4,use:"office",area:620,price:15500,status:"available"},
+  {id:"4.B", floor:4,use:"gastro",area:210,price:5400,status:"reserved"},
+  {id:"4.C", floor:4,use:"office",area:330,price:8200,status:"let"}
+];
+const FLOOR_USE={0:["retail","gastro"],1:["office"],2:["office"],3:["office"],4:["office","gastro"]};
+
+let state={floor:null,use:"all",avail:"all"};
+
+const fmtPrice=(n)=>"CHF "+n.toLocaleString("de-CH").replace(/,/g,"'");
+const fmtArea=(n)=>n.toLocaleString("de-CH")+" m²";
+
+function matches(u){
+  if(state.use!=="all" && u.use!==state.use) return false;
+  if(state.avail!=="all" && u.status!==state.avail) return false;
+  if(state.floor!==null && u.floor!==state.floor) return false;
+  return true;
+}
+/* match ignoring floor (for building counts) */
+function matchesFilters(u){
+  if(state.use!=="all" && u.use!==state.use) return false;
+  if(state.avail!=="all" && u.status!==state.avail) return false;
+  return true;
+}
+
+/* ================= RENDER BUILDING ================= */
+function renderBuilding(){
+  const stack=document.getElementById("floorStack");
+  stack.innerHTML="";
+  for(let f=4;f>=0;f--){
+    const inFloor=UNITS.filter(u=>u.floor===f);
+    const match=inFloor.filter(matchesFilters);
+    const total=inFloor.length;
+    const cnt=match.length;
+    const fillPct=total? Math.round(cnt/total*100):0;
+    const uses=[...new Set(inFloor.map(u=>u.use))].map(x=>t("use."+x)).join(" · ");
+    const row=document.createElement("div");
+    row.className="floor-row"+(state.floor===f?" active":"")+((state.use!=="all"||state.avail!=="all")&&cnt===0?" dim":"");
+    row.innerHTML=
+      '<div class="fill" style="width:'+fillPct+'%"></div>'+
+      '<div><div class="fl-name">'+t("fl."+f)+'</div><div class="fl-use">'+uses+'</div></div>'+
+      '<div class="fl-count">'+cnt+'</div>';
+    row.onclick=()=>{ state.floor = (state.floor===f? null : f); update(); };
+    stack.appendChild(row);
+  }
+}
+
+/* ================= RENDER UNITS ================= */
+function renderUnits(){
+  const grid=document.getElementById("unitsGrid");
+  const list=UNITS.filter(matches);
+  grid.innerHTML="";
+  if(list.length===0){
+    grid.innerHTML='<div class="no-results">'+t("res.none")+'</div>';
+  }else{
+    list.forEach((u,i)=>{
+      const taken=(u.status!=="available");
+      const card=document.createElement("div");
+      card.className="unit";
+      card.style.animationDelay=(i*0.04)+"s";
+      card.innerHTML=
+        '<div class="unit-top">'+
+          '<div><div class="unit-id">'+u.id+'</div><div class="unit-floor">'+t("fl."+u.floor)+'</div></div>'+
+          '<span class="tag use-'+u.use+'">'+t("use."+u.use)+'</span>'+
+        '</div>'+
+        '<div class="unit-specs">'+
+          '<div class="unit-spec"><div class="sv">'+fmtArea(u.area)+'</div><div class="sk">'+(LANG==="de"?"Fläche":"Area")+'</div></div>'+
+          '<div class="unit-spec"><div class="sv">'+fmtPrice(u.price)+'</div><div class="sk">'+t("perMonth")+'</div></div>'+
+        '</div>'+
+        '<div class="unit-foot">'+
+          '<span class="status '+u.status+'"><span class="sd"></span>'+t("status."+u.status)+'</span>'+
+          (taken
+            ? '<span class="req" style="color:var(--muted-2)">'+t("unit.taken")+'</span>'
+            : '<button class="req" data-unit="'+u.id+'">'+t("unit.req")+' →</button>')+
+        '</div>';
+      if(!taken){
+        card.querySelector("button.req").onclick=()=>preselect(u.id);
+      }
+      grid.appendChild(card);
+    });
+  }
+  // count
+  const visible=list.length;
+  const totalMatching=UNITS.filter(matchesFilters).length;
+  document.getElementById("resultCount").innerHTML=
+    t("res.count").replace("{n}","<b>"+visible+"</b>").replace("{t}",UNITS.length);
+}
+
+/* ================= CHIPS / FILTERS ================= */
+function bindChips(){
+  document.querySelectorAll("#useChips .chip").forEach(c=>{
+    c.onclick=()=>{ state.use=c.dataset.use; setActive("#useChips",c); update(); };
+  });
+  document.querySelectorAll("#availChips .chip").forEach(c=>{
+    c.onclick=()=>{ state.avail=c.dataset.avail; setActive("#availChips",c); update(); };
+  });
+}
+function setActive(sel,el){
+  document.querySelectorAll(sel+" .chip").forEach(x=>x.classList.remove("active"));
+  el.classList.add("active");
+}
+function resetFilters(){
+  state={floor:null,use:"all",avail:"all"};
+  document.querySelectorAll("#useChips .chip").forEach(x=>x.classList.toggle("active",x.dataset.use==="all"));
+  document.querySelectorAll("#availChips .chip").forEach(x=>x.classList.toggle("active",x.dataset.avail==="all"));
+  update();
+}
+function update(){ renderBuilding(); renderUnits(); }
+
+/* ================= CONTACT SELECT ================= */
+function renderUnitSelect(){
+  const sel=document.getElementById("unitSelect");
+  const cur=sel.value;
+  sel.innerHTML="";
+  const op0=document.createElement("option");
+  op0.value=""; op0.textContent=t("con.selplaceholder"); sel.appendChild(op0);
+  const opg=document.createElement("option");
+  opg.value="general"; opg.textContent=t("con.gen"); sel.appendChild(opg);
+  UNITS.filter(u=>u.status==="available").forEach(u=>{
+    const o=document.createElement("option");
+    o.value=u.id;
+    o.textContent=u.id+" · "+t("fl."+u.floor+"s")+" · "+t("use."+u.use)+" · "+fmtArea(u.area);
+    sel.appendChild(o);
+  });
+  if(cur) sel.value=cur;
+}
+function preselect(id){
+  renderUnitSelect();
+  const sel=document.getElementById("unitSelect");
+  sel.value=id;
+  document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+  sel.style.boxShadow="0 0 0 3px rgba(216,180,106,.35)";
+  setTimeout(()=>sel.style.boxShadow="",1400);
+}
+
+/* ================= LANGUAGE ================= */
+function setLang(l){
+  LANG=l;
+  document.documentElement.lang=l;
+  document.getElementById("lang-de").classList.toggle("active",l==="de");
+  document.getElementById("lang-en").classList.toggle("active",l==="en");
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k=el.getAttribute("data-i18n");
+    if(I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    const k=el.getAttribute("data-i18n-ph");
+    if(I18N[l][k]!==undefined) el.setAttribute("placeholder",I18N[l][k]);
+  });
+  update();
+  renderUnitSelect();
+}
+
+/* ================= FORM ================= */
+document.getElementById("contactForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  if(!this.checkValidity()){ this.reportValidity(); return; }
+  document.getElementById("formFields").style.display="none";
+  document.getElementById("formSuccess").classList.add("show");
+});
+
+/* ================= NAV ================= */
+const nav=document.getElementById("nav");
+window.addEventListener("scroll",()=>{ nav.classList.toggle("scrolled",window.scrollY>20); },{passive:true});
+document.getElementById("navToggle").onclick=()=>document.getElementById("navlinks").classList.toggle("open");
+document.querySelectorAll("#navlinks a").forEach(a=>a.onclick=()=>document.getElementById("navlinks").classList.remove("open"));
+
+/* ================= CANVAS WAVES ================= */
+(function(){
+  const canvas=document.getElementById("waves");
+  const ctx=canvas.getContext("2d");
+  let W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2),tms=0;
+  const layers=[
+    {amp:18,len:0.011,speed:0.018,y:0.62,col:"rgba(74,208,192,0.16)"},
+    {amp:26,len:0.008,speed:0.012,y:0.74,col:"rgba(91,141,239,0.14)"},
+    {amp:34,len:0.006,speed:0.009,y:0.86,col:"rgba(216,180,106,0.10)"}
+  ];
+  function resize(){
+    const r=canvas.getBoundingClientRect();
+    W=r.width;H=r.height;
+    canvas.width=W*dpr;canvas.height=H*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    draw(tms);
+  }
+  function draw(time){
+    tms=time;
+    ctx.clearRect(0,0,W,H);
+    layers.forEach((L,i)=>{
+      ctx.beginPath();
+      ctx.moveTo(0,H);
+      for(let x=0;x<=W;x+=6){
+        const y=L.y*H + Math.sin(x*L.len + time*L.speed + i*1.7)*L.amp
+                       + Math.sin(x*L.len*0.5 - time*L.speed*0.7)*L.amp*0.4;
+        ctx.lineTo(x,y);
+      }
+      ctx.lineTo(W,H);ctx.closePath();
+      ctx.fillStyle=L.col;ctx.fill();
+    });
+  }
+  function loop(ts){ draw(ts*0.05); requestAnimationFrame(loop); }
+  if(window.ResizeObserver){ new ResizeObserver(resize).observe(canvas); } else { window.addEventListener("resize",resize); }
+  resize();
+  requestAnimationFrame(loop);
+})();
+
+/* ================= INIT ================= */
+bindChips();
+renderUnitSelect();
+update();
+setLang("de");
+</script>
+</body>
+</html>
