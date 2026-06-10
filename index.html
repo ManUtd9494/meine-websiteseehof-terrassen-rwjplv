@@ -345,6 +345,28 @@ header.nav.scrolled{
 .dchip .dt span{font-size:12.5px;color:var(--muted)}
 .dchip .dv{margin-left:auto;font-family:var(--serif);font-size:18px;color:var(--gold-soft);white-space:nowrap}
 
+/* ============ FAQ ============ */
+.faq-list{max-width:840px;margin-top:34px;display:flex;flex-direction:column;gap:12px}
+.faq-item{
+  background:linear-gradient(165deg,var(--panel-2),var(--panel));
+  border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;
+  transition:border-color .25s,background .25s;
+}
+.faq-item.open{border-color:var(--border-strong)}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;gap:18px;width:100%;text-align:left;
+  padding:20px 22px;font-weight:600;font-size:clamp(15px,1.7vw,17px);color:var(--text);
+}
+.faq-q:hover{color:var(--gold-soft)}
+.faq-q .qi{
+  flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--border);
+  display:grid;place-items:center;color:var(--gold);font-size:20px;line-height:1;
+  transition:transform .3s ease,background .3s,color .3s,border-color .3s;
+}
+.faq-item.open .qi{transform:rotate(45deg);background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a-inner{padding:0 22px 22px;color:var(--muted);font-size:14.5px;max-width:680px}
+
 /* ============ CONTACT ============ */
 .contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:54px}
 .contact-info .lead{margin-bottom:32px}
@@ -464,7 +486,7 @@ footer{border-top:1px solid var(--border);padding:54px 0 32px;background:var(--b
   <div class="hero-grad"></div>
   <canvas id="waves"></canvas>
   <div class="wrap hero-inner">
-    <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">Vermarktungsstart · Bezug März 2027</span></span>
+    <span class="hero-badge"><span class="dot"></span><span data-i18n="hero.badge">Jetzt vormerken · Bezug März 2027</span></span>
     <h1 data-i18n="hero.h1">Arbeiten, wo <em>der See</em> beginnt.</h1>
     <p class="hero-sub" data-i18n="hero.sub">Seehof Terrassen Zug — 8'500 m² Premium-Büro- und Retailflächen in einzigartiger Lage direkt am Zugersee. Modular teilbar, nachhaltig gebaut, sofort vormerkbar.</p>
     <div class="hero-cta">
@@ -636,6 +658,37 @@ footer{border-top:1px solid var(--border);padding:54px 0 32px;background:var(--b
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="faq.eyebrow">Fragen & Antworten</span>
+    <h2 class="title" data-i18n="faq.title">Häufige Fragen.</h2>
+    <p class="lead" data-i18n="faq.lead">Die wichtigsten Antworten rund um Bezug, Flächen, Ausbau und Reservation auf einen Blick.</p>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q1">Wann ist der Bezug der Flächen geplant?</span><span class="qi">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">Der Bezug ist für März 2027 vorgesehen. Der Rohbau ist abgeschlossen, aktuell laufen Fassade und Innenausbau. Frühmieter profitieren von einer mitbestimmten Ausbauplanung.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q2">Ab welcher Flächengrösse kann ich mieten?</span><span class="qi">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">Die Flächen sind modular teilbar — ab 180 m² bis hin zu ganzen Etagen oder dem gesamten Gebäude mit 8'500 m². Mehrere Einheiten lassen sich flexibel zusammenlegen.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q3">Wie nachhaltig ist der Neubau?</span><span class="qi">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">Seehof Terrassen wird im Minergie-P-Standard realisiert: Geothermie zur Heizung und Kühlung, eine integrierte Photovoltaik-Fassade sowie Regenwassernutzung sorgen für einen minimalen Betriebs-Fussabdruck.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q4">Kann der Ausbau nach meinen Wünschen erfolgen?</span><span class="qi">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">Ja. Alle Flächen werden schlüsselfertig nach Mieterwunsch ausgebaut. Von der Raumaufteilung über Materialisierung bis zur Haustechnik begleitet Sie unser Projektteam von der Planung bis zur Übergabe.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span data-i18n="faq.q5">Wie kann ich eine Fläche reservieren?</span><span class="qi">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Wählen Sie im Etagen-Finder Ihre Wunscheinheit und klicken Sie auf «Vormerken» — die Einheit wird direkt ins Kontaktformular übernommen. Die Vormerkung ist unverbindlich; wir melden uns innert 24 Stunden.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT ============ -->
 <section id="contact">
   <div class="wrap">
@@ -720,7 +773,7 @@ const I18N={
   de:{
     "brand.sub":"Zug · Am Zugersee",
     "nav.project":"Projekt","nav.finder":"Flächen","nav.timeline":"Zeitplan","nav.location":"Lage","nav.contact":"Kontakt","nav.cta":"Beratung",
-    "hero.badge":"Vermarktungsstart · Bezug März 2027",
+    "hero.badge":"Jetzt vormerken · Bezug März 2027",
     "hero.h1":"Arbeiten, wo <em>der See</em> beginnt.",
     "hero.sub":"Seehof Terrassen Zug — 8'500 m² Premium-Büro- und Retailflächen in einzigartiger Lage direkt am Zugersee. Modular teilbar, nachhaltig gebaut, sofort vormerkbar.",
     "hero.cta1":"Flächen entdecken","hero.cta2":"Projekt ansehen",
@@ -747,6 +800,18 @@ const I18N={
     "loc.c1.t":"Bahnhof Zug","loc.c1.s":"ÖV-Drehscheibe","loc.c2.t":"Autobahn A4","loc.c2.s":"Anschluss Zug",
     "loc.c3.t":"Seepromenade","loc.c3.s":"Direkter Zugang","loc.c4.t":"Flughafen ZRH","loc.c4.s":"via A4/A14",
     "loc.c5.t":"Zürich HB","loc.c5.s":"Direktverbindung","loc.c6.t":"Altstadt Zug","loc.c6.s":"Shopping & Gastro",
+    "faq.eyebrow":"Fragen & Antworten","faq.title":"Häufige Fragen.",
+    "faq.lead":"Die wichtigsten Antworten rund um Bezug, Flächen, Ausbau und Reservation auf einen Blick.",
+    "faq.q1":"Wann ist der Bezug der Flächen geplant?",
+    "faq.a1":"Der Bezug ist für März 2027 vorgesehen. Der Rohbau ist abgeschlossen, aktuell laufen Fassade und Innenausbau. Frühmieter profitieren von einer mitbestimmten Ausbauplanung.",
+    "faq.q2":"Ab welcher Flächengrösse kann ich mieten?",
+    "faq.a2":"Die Flächen sind modular teilbar — ab 180 m² bis hin zu ganzen Etagen oder dem gesamten Gebäude mit 8'500 m². Mehrere Einheiten lassen sich flexibel zusammenlegen.",
+    "faq.q3":"Wie nachhaltig ist der Neubau?",
+    "faq.a3":"Seehof Terrassen wird im Minergie-P-Standard realisiert: Geothermie zur Heizung und Kühlung, eine integrierte Photovoltaik-Fassade sowie Regenwassernutzung sorgen für einen minimalen Betriebs-Fussabdruck.",
+    "faq.q4":"Kann der Ausbau nach meinen Wünschen erfolgen?",
+    "faq.a4":"Ja. Alle Flächen werden schlüsselfertig nach Mieterwunsch ausgebaut. Von der Raumaufteilung über Materialisierung bis zur Haustechnik begleitet Sie unser Projektteam von der Planung bis zur Übergabe.",
+    "faq.q5":"Wie kann ich eine Fläche reservieren?",
+    "faq.a5":"Wählen Sie im Etagen-Finder Ihre Wunscheinheit und klicken Sie auf «Vormerken» — die Einheit wird direkt ins Kontaktformular übernommen. Die Vormerkung ist unverbindlich; wir melden uns innert 24 Stunden.",
     "con.eyebrow":"Kontakt","con.title":"Sichern Sie sich Ihre Fläche.",
     "con.lead":"Unser Vermarktungsteam berät Sie persönlich zu Grundrissen, Ausbau und Konditionen. Wählen Sie Ihre Wunscheinheit aus — wir melden uns innert 24 Stunden.",
     "con.phone":"Mo–Fr, 08:30–18:00","con.mail":"Wir antworten innert 24 h","con.addr.t":"Seehof Terrassen, Zug","con.addr.s":"Seestrasse, 6300 Zug",
@@ -768,7 +833,7 @@ const I18N={
   en:{
     "brand.sub":"Zug · On Lake Zug",
     "nav.project":"Project","nav.finder":"Spaces","nav.timeline":"Timeline","nav.location":"Location","nav.contact":"Contact","nav.cta":"Consult",
-    "hero.badge":"Marketing launch · Move-in March 2027",
+    "hero.badge":"Reserve now · Move-in March 2027",
     "hero.h1":"Work where <em>the lake</em> begins.",
     "hero.sub":"Seehof Terrassen Zug — 8,500 m² of premium office and retail space in a unique location right on Lake Zug. Modular layouts, sustainably built, available to reserve now.",
     "hero.cta1":"Explore spaces","hero.cta2":"View project",
@@ -795,6 +860,18 @@ const I18N={
     "loc.c1.t":"Zug Station","loc.c1.s":"Transit hub","loc.c2.t":"Motorway A4","loc.c2.s":"Zug junction",
     "loc.c3.t":"Lake promenade","loc.c3.s":"Direct access","loc.c4.t":"Airport ZRH","loc.c4.s":"via A4/A14",
     "loc.c5.t":"Zurich Main","loc.c5.s":"Direct train","loc.c6.t":"Zug Old Town","loc.c6.s":"Shopping & dining",
+    "faq.eyebrow":"Questions & Answers","faq.title":"Frequently asked questions.",
+    "faq.lead":"The key answers on move-in, spaces, fit-out and reservation at a glance.",
+    "faq.q1":"When are the spaces scheduled for move-in?",
+    "faq.a1":"Move-in is planned for March 2027. The shell is complete; façade and interior fit-out are currently underway. Early tenants benefit from a co-determined fit-out plan.",
+    "faq.q2":"What is the minimum area I can lease?",
+    "faq.a2":"The spaces are modular — from 180 m² up to entire floors or the whole building of 8,500 m². Several units can be flexibly combined.",
+    "faq.q3":"How sustainable is the new building?",
+    "faq.a3":"Seehof Terrassen is built to the Minergie-P standard: geothermal heating and cooling, an integrated photovoltaic façade and rainwater reuse ensure a minimal operating footprint.",
+    "faq.q4":"Can the fit-out be tailored to my needs?",
+    "faq.a4":"Yes. All spaces are fitted out turn-key to tenant specification. From room layout and materials to building services, our project team supports you from planning to handover.",
+    "faq.q5":"How can I reserve a space?",
+    "faq.a5":"Choose your preferred unit in the floor finder and click “Reserve” — the unit is transferred straight into the contact form. The reservation is non-binding; we'll get back to you within 24 hours.",
     "con.eyebrow":"Contact","con.title":"Secure your space.",
     "con.lead":"Our marketing team advises you personally on floor plans, fit-out and terms. Select your preferred unit — we'll get back to you within 24 hours.",
     "con.phone":"Mon–Fri, 08:30–18:00","con.mail":"We reply within 24 h","con.addr.t":"Seehof Terrassen, Zug","con.addr.s":"Seestrasse, 6300 Zug",
@@ -911,7 +988,6 @@ function renderUnits(){
   }
   // count
   const visible=list.length;
-  const totalMatching=UNITS.filter(matchesFilters).length;
   document.getElementById("resultCount").innerHTML=
     t("res.count").replace("{n}","<b>"+visible+"</b>").replace("{t}",UNITS.length);
 }
@@ -963,6 +1039,29 @@ function preselect(id){
   setTimeout(()=>sel.style.boxShadow="",1400);
 }
 
+/* ================= FAQ ACCORDION ================= */
+function bindFaq(){
+  document.querySelectorAll(".faq-q").forEach(btn=>{
+    btn.onclick=()=>{
+      const item=btn.parentElement;
+      const ans=item.querySelector(".faq-a");
+      const isOpen=item.classList.contains("open");
+      if(isOpen){
+        item.classList.remove("open");
+        ans.style.maxHeight=null;
+      }else{
+        item.classList.add("open");
+        ans.style.maxHeight=ans.scrollHeight+"px";
+      }
+    };
+  });
+}
+function refreshOpenFaq(){
+  document.querySelectorAll(".faq-item.open .faq-a").forEach(a=>{
+    a.style.maxHeight=a.scrollHeight+"px";
+  });
+}
+
 /* ================= LANGUAGE ================= */
 function setLang(l){
   LANG=l;
@@ -979,6 +1078,7 @@ function setLang(l){
   });
   update();
   renderUnitSelect();
+  refreshOpenFaq();
 }
 
 /* ================= FORM ================= */
@@ -1035,6 +1135,7 @@ document.querySelectorAll("#navlinks a").forEach(a=>a.onclick=()=>document.getEl
 
 /* ================= INIT ================= */
 bindChips();
+bindFaq();
 renderUnitSelect();
 update();
 setLang("de");
